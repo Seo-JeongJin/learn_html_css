@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form input</title>
+</head>
+<body>
+    <form action="">
+    <fieldset>
+        <legend>Input Tag</legend>
+        <ul>
+            <li>
+                <label for="text">Text</label><br>
+                <!-- required == 아무 값도 입력되지 않았을 때 값 입력하라는 표시가 뜸 -->
+                 <!-- readonly == 필드를 읽기 전용으로 만들어 값 설정이 안됨 -->
+                <input type="text" id="text" required readonly>
+            </li>
+            <li>
+                <label for="email">이메일</label>
+                <!-- input type="email" 을 하게 되면 이 데이터를 서버로 전송할 때 
+                자동으로 이메일 규칙인 유효성 체크 -->
+                <!-- 이메일 칸에 123123과 같은 이메일 형식이 아닌 값을 입력하게 되면 
+                이메일 주소를 입력하라는 표시 뜸 -->
+                <!-- disabled == 비활성화되며 해당 필드는 서버로 안 넘어감 -->
+                <input type="email" id="email" required disabled>
+            </li>
+            <li>
+                <label for="tel">전화번호</label>
+                <!-- type="tel" 이라고 하면 모바일에서 전화번호 란 탭할 시에 번호 입력 키패드만 뜸 -->
+                 <!-- autofocus == 초기에 해당 필드에 커서를 위치 시킴 -->
+                <input type="tel" id="tel" required autofocus>
+            </li>
+            <li>
+                <label for="url">URL</label>
+                <!-- type="url" == url이 아닌 다른 값이 입력되면 url을 입력하라고 뜸 -->
+                <!-- placeholder == default로 값을 설명하는 문구를 나타내며
+                클릭 후 데이터 입력 시 사라짐 -->
+                <input type="url" id="url" required placeholder="url을 입력해주세요">
+            </li>
+            <li>
+                <label for="number">number</label>
+                <!-- type="number" == 한글이나 문자가 입력 안됨 -->
+                <!-- number, range 에는 최솟값과 최댓값을 입력할 수 있는 속성이 있음 -> min, max -->
+                <!-- 최솟값보다 작거나 최댓값보다 크면 값 수정하라고 뜸 -->
+                <input type="number" id="number" required min="5" max="10">
+            </li>
+            <li>
+                <label for="range">range</label>
+                <!-- 한글이나 문자가 입력 안됨 -->
+                <input type="range" id="range" required>
+            </li>
+            <li>
+                <label for="password">password</label>
+                <input type="password" id="password" required>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>날짜관련</legend>
+        <ul>
+            <li>
+                <label for="date">date</label>
+                <!-- 캘린더 생성, min과 max을 추가하면 사이의 값만 입력할 수 있게 뜸 -->
+                <input type="date" id="date" min="2025-07-04" max="2025-07-09">
+            </li>
+            <li>
+                <label for="month">date</label>
+                <!-- 월 단위로만 입력받을 수 있음 -->
+                <input type="month" id="month">
+            </li>
+            <li>
+                <label for="week">date</label>
+                <!-- 날짜가 해당 년도 몇 번째 주인지 나타냄 -->
+                <input type="week" id="week">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>시간관련</legend>
+        <ul>
+            <li>
+                <label for="time">time</label>
+                <!-- 마찬가지로 min max로 범위 설정 가능 -->
+                <input type="time" id="time" min="20:00" max="22:00">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>그 외</legend>
+        <ul>
+            <li>
+                <!-- 파일 선택 가능케 함, multiple == 파일 다중 선택 가능 -->
+                <input type="file" multiple>
+            </li>
+            <li>
+                <!-- 서버 측으로 어떠한 데이터를 넘길 때 사용 -->
+                 <!-- ui상으로는 표시 안됨 -->
+                <input type="hidden" name="" value="">
+            </li>
+        </ul>
+    </fieldset>
+    <input type="submit" value="제출하기">
+    </form>
+</body>
+</html>

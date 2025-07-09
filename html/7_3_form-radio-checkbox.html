@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio&Checkbox</title>
+</head>
+<body>
+    <form action="/signup">
+        <fieldset>
+            <legend>좋아하는 색상을 모두 선택해주세요.</legend>
+            <ul>
+            <li>
+                <!-- checkbox == 여러 개의 체크박스 항목 중 2개 이상 선택 가능 -->
+                 <!-- 그리고 체크 박스 선택 시 선택된 체크 박스의 값이 서버로 전송 -->
+                <label for="red">빨강</label>
+                <input type="checkbox" id="red" value="red">
+            </li>
+            <li>
+                <label for="orange">주황</label>
+                <input type="checkbox" id="orange" value="orange">
+            </li>
+            <li>
+                <label for="yellow">노랑</label>
+                <input type="checkbox" id="yellow" value="yellow">
+            </li>
+            <li> 
+                <label for="green">초록</label>
+                <input type="checkbox" id="green" value="green">
+            </li>
+            <li>
+                <label for="blue">파랑</label>
+                <input type="checkbox" id="blue" value="blue">
+            </li>
+        </ul>
+        </fieldset>
+        <fieldset>
+            <legend>배송방법은?</legend>
+            <ul>
+                <li>
+                    <!-- radio == 여러 개의 라디오 항목 중 1개를 선택할 수 있음 -->
+                    <!-- 그리고 선택 시 선택된 항목의 value 값이 서버로 전송됨 -->
+                    <!-- 여러개 중 하나를 선택하게 하려면 그 여러 항목의 <radio name="""> 속성 값을 -->
+                    <!-- 같은 값으로 그룹핑 해줘야 함 -->
+                    <label for="free">무료</label>
+                    <input type="radio" name="delivery" id="free" value="free">
+                </li>
+                <li>
+                    <label for="pay">유료</label>
+                    <input type="radio" name="delivery" id="pay" value="pay">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>자기소개서</legend> 
+            <!-- textarea == 여러 줄의 데이터를 입력받을 수 있다 -->
+            <!-- 속성 -->
+            <!-- - rows == 화면에 표시되는 행 수를 지정 -->
+            <!-- - cols == 화면에 표시되는 열 수를 지정 -->
+            <textarea name="" id="" cols="20" rows="5">저는 서정진입니다.</textarea>
+        </fieldset>
+        <fieldset>
+            <legend>주문 상품을 선택해주세요!</legend>
+            <ul>
+                <li>
+                    <!-- select == 옵션 메뉴를 제공 -->
+                    <!-- option 태그로 각 항목을 나타내며 select 태그로 감싸준다 -->
+                    <!-- 옵션 안에 있는 내용은 사용자 화면에 보여주는 내용이며 -->
+                    <!-- 실제 서버로 전송되는 값은 value 안의 값이다 -->
+                     <!-- multiple == 여러 개를 선택할 수 있게 됨 -->
+                    <select name="goods" id="goods" multiple>
+                        <option value="apple_10kg">사과10kg</option>
+                        <!-- seleted == default로 선택되는 값 -->
+                        <option value="apple_20kg" selected>사과20kg</option>
+                        <option value="apple_30kg">사과30kg</option>
+                        <option value="apple_40kg">사과40kg</option>
+                        <option value="apple_50kg">사과50kg</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="ice-cream-choice">맛을 선택하세요</label>
+                    <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+                    <datalist id="ice-cream-flavors">
+                        <option value="Chocolate">
+                        <option value="Coconut">
+                        <option value="Mint">
+                        <option value="Strawberry">
+                        <option value="Vanilla">
+                    </datalist>
+                </li>
+            </ul>
+        </fieldset>
+        <!-- button type="submit" == action에 지정한 url로 양식 데이터를 서버로 제출 -->
+        <button type="submit">제출하기</button>
+        <!-- 모든 입력 필드를 초기 값으로 되돌린다 -->
+        <button type="reset">리셋하기</button>
+        <!-- 주로 자바스크립트 코드를 명령할 때 사용함 -->
+        <button type="button" onclick="alert('Hello World!')">버튼</button>
+    </form>
+</body>
+</html>

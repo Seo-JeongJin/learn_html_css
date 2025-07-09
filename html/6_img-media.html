@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>img media</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            border: 1px solid darkslategray;
+        }
+    </style>
 </head>
 <body>
     <h2>이미지 태그</h2>
     <!-- 이미지가 상위 폴더에 있을 때 -->
+    <!-- src == 이미지 경로, alt == resource를 불러오지 못했을 때 대체 -->
     <img width="600" src="../fries.jpg" alt="fries">
     <img height="500" src="../fries.jpg" alt="fries">
     <!-- 이미지가 동일한 위치에 있을 때 -->
@@ -16,5 +25,29 @@
     <!-- 이미지가 하위 폴더에 있을 때 -->
     <img height="200" src="./images/egg.jpg" alt="egg">
     <img height="100" src="./images/egg.jpg" alt="egg">
+
+    <h2>오디오 태그</h2>
+    <!-- controls == 컨트롤 바 표시 -->
+    <audio src="../assets/audio.mp3" controls></audio>
+
+    <h2>비디오 태그</h2>
+    <!-- poster="파일 이름" -> 비디오가 재생되기 전까지 화면에 표시될 포스터 이미지 == 썸네일 -->
+    <video width="800" src="../assets/video.mp4" poster="./images/egg.jpg" controls type="video/mp4"></video>
+
+    <h2>하이퍼 링크</h2>
+    <!-- target="_blank" -> 새 탭 열기 -->
+    <a href="http://www.naver.com" target="_blank">네이버</a>와 <a href="http://google.com">구글</a>은 포털 사이트입니다.
+    <a href="#name">name 으로 이동</a>
+    <a href="mailto:tj0wjd9wls8@gmail.com">이메일 보내기</a>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div id="name">8</div>
+    <div>9</div>
+    <div>10</div>
 </body>
 </html>
